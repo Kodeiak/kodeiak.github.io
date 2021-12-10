@@ -1,0 +1,218 @@
+body {
+  font-size: 1.6rem;
+  text-align: center;
+  border-style: solid;
+  border-radius: 15px;
+  border-color: #CB4154;
+  background: lightpink;
+}
+
+#site {
+  /* this will disregard extra padding that doesn't fit the page */
+  overflox-y: hidden;
+  overflow-y: hidden;
+}
+#main {
+  color: #CB4154;
+  background: #FFF;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: repeat (auto, auto);
+  grid-template-areas: 
+    'header header header'
+    'note note note'
+    'leftrose joyce rightrose'
+    'tribute-title tribute-title tribute-title'
+    'memories memories memories'
+    'form form form'
+    'footer footer footer'
+    ;
+  justify-content: space-around;
+  justify-items: center;
+  }
+
+#title {
+  border-style: ;
+  background-color: lightpink;
+  border-radius: 15px 15px 0 0;
+  grid-area: header;
+  margin-top: 0;
+  width: 100%;
+  font-family: Georgia;
+  font-style: italic;
+  z-index: 1;
+}
+
+#note1 {
+  grid-area: note;
+  font-size: 10px;
+}
+
+#left-rose {
+  grid-area: leftrose;  
+}
+
+#rose-image-1 {
+  transform: scaleX(-1);
+}
+
+#img-div {
+  grid-area: joyce;
+  
+}
+
+#image {
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px;
+  justify-self: center;
+  background: transparent;
+}
+
+#right-rose {
+  grid-area: rightrose;
+}
+
+#rose-image-2 {
+  
+}
+
+img {
+  /*User Story #8: The img element should responsively resize, relative to the width of its parent element, without exceeding its original size.*/
+  max-width: 35%;
+  display: block;
+  height: auto;
+  margin: 0 auto;
+}
+
+#img-caption {
+  font-size: 1rem;
+}
+
+#tribute-title {
+  grid-area: tribute-title;
+}
+
+#tribute-info {
+  grid-area: memories;
+  font-style: normal;
+  font-weight: normal;
+}
+
+ul {
+  width: 500px;
+  text-align: start;
+  font-size: 1.2rem;
+  
+}
+
+li {
+  margin: 20px 0 0 20px ;
+}
+
+#quoted {
+  font-style: italic;
+}
+
+#memories-form {
+  grid-area: form;
+}
+#tribute-link {
+  font-size: 1rem;
+  justify-self: center;
+  width: 100%;
+  grid-area: footer;
+}
+#tribute-link:hover {
+  background-color: hsl(360, 50%, 75%);
+  border-radius: 0 0 15px 15px;
+}
+
+/*Slideshow container*/
+.slideshow-container {
+  position: relative;
+  background: #f1f1f1;
+}
+
+/*Slides*/
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Position the "prev button" to the left */
+.prev {
+  position: absolute;
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/*On hover, add a background with a little bit of see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(223, 159, 160, 0.8);
+  border-radius: 10%;
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  text-align: center;
+  padding: 20px;
+  backgound: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  left: 45%;
+  margin: 0 20px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {
+  color: cornflowerblue;
+}
+
+/*Responsive Web Design*/
+@media screen and (max-width: 768px) {
+  #main {width:100%}
+  img {}
+}
+
